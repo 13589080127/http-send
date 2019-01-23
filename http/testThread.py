@@ -2,6 +2,7 @@ import threading
 import json
 import requests
 
+
 class MyThread(threading.Thread):
     def __init__(self, threadID, name, counter):
         threading.Thread.__init__(self)
@@ -18,5 +19,3 @@ class MyThread(threading.Thread):
         print data
         res_data = requests.post(url=rootUrl, data=data, headers=header)
         print res_data.json()
-
-
